@@ -5,7 +5,7 @@ class Song < ActiveRecord::Base
 
   #genre_name
   def genre_name
-    self.genre ? self.genre.name : nil 
+    self.genre ? self.genre.name : nil
   end
 
   def genre_name=(name)
@@ -14,7 +14,7 @@ class Song < ActiveRecord::Base
 
   #artist_name
   def artist_name
-    Artist.find(self.artist_id).name
+    self.artist? self.genre.name : nil
   end
 
   def artist_name=(name)
